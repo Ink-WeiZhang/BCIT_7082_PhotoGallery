@@ -6,6 +6,7 @@
     <string name="btnTitleSearch">Search</string>
     <string name="textCaptionHint">Edit Caption..</string>
     <string name="txtFilterInstr">Filter by Date and/or Keywords</string>
-    <string name="txtKeywordHint">Enter Keywords Here...</string>
+    <string name="txtKeywordHint">Enter Keywords Here…</string>
     <string name="btnTitleFilter">Filter</string>
+    <string name="fish">Fish</string>
 </resources>

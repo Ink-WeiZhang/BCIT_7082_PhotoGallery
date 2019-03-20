@@ -9,46 +9,51 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="106dp"
-        android:editable="false"
+        android:layout_marginTop="10dp"
         android:text="@string/txtFilterInstr" />
 
-    <EditText
-        android:id="@+id/date1"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/pickers"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="157dp"
-        android:ems="10"
-        android:inputType="date" />
+        android:layout_height="450dp"
+        android:layout_below="@id/txtInstrView"
+        android:weightSum="100"
+        android:gravity="center_horizontal">
+
+        <DatePicker
+            android:id="@+id/date1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="true"
+            android:spinnersShown="false"
+            android:layout_weight="50"/>
+
+        <DatePicker
+            android:id="@+id/date2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="true"
+            android:spinnersShown="false"
+            android:layout_weight="50"/>
+
+    </LinearLayout>
 
     <EditText
-        android:id="@+id/date2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="234dp"
-        android:ems="10"
-        android:inputType="date" />
-
-    <TextView
         android:id="@+id/txtKeyWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/pickers"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="272dp"
         tools:text="@string/txtKeywordHint" />
 
     <Button
         android:id="@+id/btnFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/txtKeyWord"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="186dp"
         android:onClick="btnFilterClicked"
         android:text="@string/btnTitleFilter" />
 </RelativeLayout>
